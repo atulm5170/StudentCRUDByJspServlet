@@ -1,0 +1,151 @@
+/* =========================
+   Common Reset
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   Body
+   ========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    text-align: center;
+    padding: 50px;
+    color: #333;
+}
+
+
+/* =========================
+   Headings
+   ========================= */
+
+h1 {
+    margin-bottom: 35px;
+    font-size: 32px;
+}
+
+
+/* =========================
+   Home Page Links
+   ========================= */
+
+a {
+    display: block;
+    width: 300px;
+    margin: 15px auto;
+    padding: 15px;
+
+    background-color: #333;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #555;
+}
+
+
+/* =========================
+   Form
+   ========================= */
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    text-align: left;
+}
+
+
+/* =========================
+   Labels
+   ========================= */
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   Input Fields
+   ========================= */
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   Input Focus
+   ========================= */
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #333;
+}
+
+
+/* =========================
+   Submit Button
+   ========================= */
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+
+    background-color: #333;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+/* =========================
+   Back to Home Link
+   ========================= */
+
+form + br + a {
+    margin-top: 25px;
+}

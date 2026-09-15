@@ -1,0 +1,4 @@
+com\student\UpdateServlet.class
+com\student\InsertServlet.class
+com\student\ShowServlet.class
+com\student\DeleteServlet.class
