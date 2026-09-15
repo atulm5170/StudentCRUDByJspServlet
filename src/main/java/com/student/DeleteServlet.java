@@ -24,9 +24,20 @@ public class DeleteServlet extends HttpServlet{
      // Get ID from frontend
         int id = Integer.parseInt(req.getParameter("id"));
         
-        String url = "jdbc:mysql://localhost:3306/studentdb";
-        String username = "root";
-        String password = "atul@1234";
+        // database details
+//        String url = "jdbc:mysql://localhost:3306/studentdb";
+//        String username = "root";
+//        String password = "";
+        
+        // replaced as database details
+        String host = System.getenv("DB_HOST");
+        String port = System.getenv("DB_PORT");
+        String database = System.getenv("DB_NAME");
+        String username = System.getenv("DB_USER");
+        String password = System.getenv("DB_PASSWORD");
+
+        String url = "jdbc:mysql://" + host + ":" + port + "/" + database
+                + "?sslMode=REQUIRED";
         
         String deleteQuery = "DELETE FROM student WHERE id = ?";
         

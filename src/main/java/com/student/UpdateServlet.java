@@ -27,10 +27,20 @@ public class UpdateServlet extends HttpServlet{
         int age = Integer.parseInt(req.getParameter("age"));
         String email = req.getParameter("email");
         
+        //database details
+//        String url = "jdbc:mysql://localhost:3306/studentdb";
+//        String username = "root";
+//        String password = "";
         
-        String url = "jdbc:mysql://localhost:3306/studentdb";
-        String username = "root";
-        String password = "atul@1234";
+        // replaced as database details
+        String host = System.getenv("DB_HOST");
+        String port = System.getenv("DB_PORT");
+        String database = System.getenv("DB_NAME");
+        String username = System.getenv("DB_USER");
+        String password = System.getenv("DB_PASSWORD");
+
+        String url = "jdbc:mysql://" + host + ":" + port + "/" + database
+                + "?sslMode=REQUIRED";
         
         String updateQuery = "UPDATE student SET name = ?, SET age = ?, SET email = ? WHERE id = ?";
         
